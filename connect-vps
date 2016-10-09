@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ssh hacker@173.82.80.71
