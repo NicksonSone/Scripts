@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# get user and host
+host=`hostname`
+user=`whoami`
+user_host=$user@$host
+
+if [ $user_host != "nickson@nickson-OptiPlex-7040" ]
+then
+    echo "This is not a lab PC!!! Cannot update ip address in laboratory script"
+else
+    # get latest assigned IP address
+    new_ip=`/sbin/ifconfig enp0s31f6 | grep 'inet addr' | cut -d: -f2 | awk \
+        '{print $1}'`
+
+    # update the second line of script to latest ip
+    update="sed -i '2s/.*/ssh nickson@$new_ip/g' /home/nickson/connect/laboratory"
+    eval "$update"
+    echo "Lab ip updated"
+fi
