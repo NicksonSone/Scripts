@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-ssh -p 33333 zhujq@172.18.216.105
+ssh -X -p 33333 zhujq@172.18.216.105
