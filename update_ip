@@ -18,3 +18,7 @@ else
     eval "$update"
     echo "Lab ip updated"
 fi
+
+git add laboratory
+git commit -m "new ip"
+git push origin master
