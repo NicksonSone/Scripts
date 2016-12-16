@@ -58,6 +58,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" toggle tagbar
+nmap <F8> :TagbarToggle<CR> 
+
 set clipboard=unnamedplus
 set guioptions+=a
 
