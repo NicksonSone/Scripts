@@ -49,12 +49,17 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 autocmd Filetype tex source ~/.vim/auctex.vim
 
+filetype on 
+
 " strips off shift key in normal mode 
 nnoremap ; :
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" toggle tagbar
+nmap <F8> :TagbarToggle<CR> 
 
 set clipboard=unnamedplus
 set guioptions+=a
@@ -66,11 +71,13 @@ set shiftwidth=4        " number of spaces to use for autoindenting
 set autoindent          " always set autoindenting on
 set textwidth=80        " limit length of line to 80 characters
 set incsearch           " search as charater are entered
-set hlsearch            " hight light search term
+set hlsearch            " high light search term
 set pastetoggle=<F2>    " toggle paste mode, paste text without autoindent
 set cursorline          " highlight current line
 set wildmenu            " visual autocomplete for command menu
 colorscheme darkblue
+" set current-line-highlight colorshceme
+highlight CursorLine term=bold cterm=bold ctermbg=DarkBlue       
 
 " spell check the text
 func! WordProcessor()
