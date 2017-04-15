@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+ssh -X -p 51122 junqizhu@172.18.216.66
+
