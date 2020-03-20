@@ -53,11 +53,20 @@ filetype on
 
 " strips off shift key in normal mode 
 nnoremap ; :
+nnoremap " '
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+inoremap { {}<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap < <><Esc>i
+inoremap ' ''<Esc>i
+inoremap " ""<Esc>i
+inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+xnoremap p pgvy
 " toggle tagbar
 nmap <F8> :TagbarToggle<CR> 
 
@@ -78,6 +87,16 @@ set wildmenu            " visual autocomplete for command menu
 colorscheme darkblue
 " set current-line-highlight colorshceme
 highlight CursorLine term=bold cterm=bold ctermbg=DarkBlue       
+
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 3
+let g:netrw_altv = 1
+let g:netrw_winsize = 15
+"augroup ProjectDrawer
+"   autocmd!
+"   autocmd VimEnter * :Vexplore
+"augroup END
 
 " spell check the text
 func! WordProcessor()
