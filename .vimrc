@@ -71,7 +71,7 @@ xnoremap p pgvy
 nmap <F8> :TagbarToggle<CR> 
 
 set clipboard=unnamedplus
-set guioptions+=a
+set guioptions+=a  " comment out on MacOS
 
 " syntax on for mac
 set expandtab
