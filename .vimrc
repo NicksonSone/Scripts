@@ -73,6 +73,7 @@ nmap <F8> :TagbarToggle<CR>
 set clipboard=unnamedplus
 set guioptions+=a
 
+" syntax on for mac
 set expandtab
 set tabstop=4           " soft tab of 4 spaces
 set softtabstop=4
